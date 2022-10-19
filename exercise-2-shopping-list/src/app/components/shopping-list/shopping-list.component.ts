@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 import { Item } from '..';
 
@@ -7,7 +7,7 @@ import { Item } from '..';
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.scss'],
 })
-export class ShoppingListComponent implements OnInit {
+export class ShoppingListComponent {
   public items: Item[] = [
     { id: uuid(), description: 'string1', done: false },
     { id: uuid(), description: 'string2', done: true },
@@ -15,8 +15,6 @@ export class ShoppingListComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   addItem(description: string) {
     if (!description) {
