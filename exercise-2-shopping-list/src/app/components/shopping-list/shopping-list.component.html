@@ -1,0 +1,14 @@
+<div>
+  <input
+    #newItem
+    (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+    id="addItemInput"
+  />
+  <button (click)="addItem(newItem.value)">Add</button>
+
+  <div>
+    <div *ngFor="let item of items">
+      <app-shopping-list-item [item]="item"></app-shopping-list-item>
+    </div>
+  </div>
+</div>
