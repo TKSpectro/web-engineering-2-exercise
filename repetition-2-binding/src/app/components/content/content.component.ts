@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
   @Input() content = '';
+  public content2 = 'This is the content2 property';
 
   constructor() {}
 
