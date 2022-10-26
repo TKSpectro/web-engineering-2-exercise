@@ -13,4 +13,10 @@
   <input type="text" [(ngModel)]="message" />
 </div>
 
-<button (click)="onSubmit()">Submit</button>
+<button *appFormAllRequired="[name, email, message]" (click)="onSubmit()">
+  Submit structural directive
+</button>
+
+<button [appDisableButtonIfNotAllInputsSet]="allInputsSet" (click)="onSubmit()">
+  Submit attribute directive
+</button>

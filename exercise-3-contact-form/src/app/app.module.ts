@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FormAllRequiredDirective } from './directives/form-all-required.directive';
+import { DisableButtonIfNotAllInputsSetDirective } from './directives/disable-button-if-not-all-inputs-set.directive';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -16,7 +17,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, ContactComponent, FormAllRequiredDirective],
+  declarations: [AppComponent, ContactComponent, FormAllRequiredDirective, DisableButtonIfNotAllInputsSetDirective],
   imports: [
     HttpClientModule,
     BrowserModule,

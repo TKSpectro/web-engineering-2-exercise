@@ -13,6 +13,9 @@ export class ContactComponent implements OnInit {
   @Input() email!: string;
   @Input() message!: string;
 
+  public allInputsSet =
+    this.name?.length > 0 && this.email?.length > 0 && this.message?.length > 0;
+
   constructor(translate: TranslateService) {
     translate.use(this.i18n);
   }
