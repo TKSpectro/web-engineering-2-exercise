@@ -1,0 +1,16 @@
+<p>Contact</p>
+
+<div>
+  <label for="name">{{ "NAME" | translate }}</label>
+  <input type="text" [(ngModel)]="name" />
+</div>
+<div>
+  <label for="email">{{ "EMAIL" | translate }}</label>
+  <input type="text" [(ngModel)]="email" />
+</div>
+<div>
+  <label for="message">{{ "MESSAGE" | translate }}</label>
+  <input type="text" [(ngModel)]="message" />
+</div>
+
+<button (click)="onSubmit()">Submit</button>

@@ -14,6 +14,6 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {}
 
   clickMeHandler = () => {
-    alert('clicked');
+    alert(this.content2);
   };
 }
