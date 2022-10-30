@@ -1,5 +1,8 @@
 {
-  "NAME": "NameDE",
-  "EMAIL": "EmailDE",
-  "MESSAGE": "MessageDE"
+  "SUBMIT_STRUCTURAL_DIRECTIVE": "Structural Directive abschicken",
+  "SUBMIT_ATTRIBUTE_DIRECTIVE": "Attribute Directive abschicken",
+
+  "NAME": "Name",
+  "EMAIL": "E-Mail",
+  "MESSAGE": "Nachricht"
 }

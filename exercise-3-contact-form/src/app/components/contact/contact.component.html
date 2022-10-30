@@ -1,6 +1,11 @@
 <p>Contact</p>
 
 <div>
+  <button (click)="langHandler('de')">DE</button>
+  <button (click)="langHandler('en')">EN</button>
+</div>
+
+<div>
   <label for="name">{{ "NAME" | translate }}</label>
   <input type="text" [(ngModel)]="name" />
 </div>
@@ -13,10 +18,13 @@
   <input type="text" [(ngModel)]="message" />
 </div>
 
-<button *appFormAllRequired="[name, email, message]" (click)="onSubmit()">
-  Submit structural directive
+<button
+  [appDisableButtonIfNotAllInputsSet]="[name, email, message]"
+  (click)="onSubmit()"
+>
+  {{ "SUBMIT_ATTRIBUTE_DIRECTIVE" | translate }}
 </button>
 
-<button [appDisableButtonIfNotAllInputsSet]="allInputsSet" (click)="onSubmit()">
-  Submit attribute directive
+<button *appFormAllRequired="[name, email, message]" (click)="onSubmit()">
+  {{ "SUBMIT_STRUCTURAL_DIRECTIVE" | translate }}
 </button>

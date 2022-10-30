@@ -1,5 +1,8 @@
 {
-  "NAME": "NameEN",
-  "EMAIL": "EmailEN",
-  "MESSAGE": "MessageEN"
+  "SUBMIT_STRUCTURAL_DIRECTIVE": "Submit Structural Directive",
+  "SUBMIT_ATTRIBUTE_DIRECTIVE": "Submit Attribute Directive",
+
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "MESSAGE": "Message"
 }

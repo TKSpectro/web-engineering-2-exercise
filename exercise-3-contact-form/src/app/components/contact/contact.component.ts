@@ -7,17 +7,14 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  i18n = 'en';
+  private translate: TranslateService;
 
   @Input() name!: string;
   @Input() email!: string;
   @Input() message!: string;
 
-  public allInputsSet =
-    this.name?.length > 0 && this.email?.length > 0 && this.message?.length > 0;
-
   constructor(translate: TranslateService) {
-    translate.use(this.i18n);
+    this.translate = translate;
   }
 
   ngOnInit(): void {}
@@ -30,5 +27,9 @@ export class ContactComponent implements OnInit {
         message: this.message,
       })
     );
+  }
+
+  langHandler(lang: string): void {
+    this.translate.use(lang || 'en');
   }
 }
