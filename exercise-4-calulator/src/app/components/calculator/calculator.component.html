@@ -1,0 +1,33 @@
+<div>
+  <div>
+    {{ leftNumber }}
+    <input type="number" [(ngModel)]="rightNumber" (input)="inputHandler()" />
+    {{ result }}
+  </div>
+  <div>
+    <button
+      [style.background-color]="this.operation === '+' ? 'yellow' : undefined"
+      (click)="operationHandler('+')"
+    >
+      +
+    </button>
+    <button
+      [style.background-color]="this.operation === '-' ? 'yellow' : undefined"
+      (click)="operationHandler('-')"
+    >
+      -
+    </button>
+    <button
+      [style.background-color]="this.operation === '*' ? 'yellow' : undefined"
+      (click)="operationHandler('*')"
+    >
+      *
+    </button>
+    <button
+      [style.background-color]="this.operation === '/' ? 'yellow' : undefined"
+      (click)="operationHandler('/')"
+    >
+      /
+    </button>
+  </div>
+</div>
