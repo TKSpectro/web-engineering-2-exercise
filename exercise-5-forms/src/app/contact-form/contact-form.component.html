@@ -1,0 +1,34 @@
+<form #f="ngForm">
+  <div>
+    <input name="name" [(ngModel)]="name" required />
+    <span *ngIf="f.form.get('name')?.dirty && !f?.form?.get('name')?.valid">
+      Field is not valid
+    </span>
+    <hr />
+    <input name="age" type="number" [(ngModel)]="age" [max]="maxAge" />
+    <span *ngIf="f.form.get('name')?.dirty && !f?.form?.get('name')?.valid">
+      Field is not valid
+    </span>
+    <hr />
+    <input name="email" [(ngModel)]="email" required email />
+    <span *ngIf="f.form.get('email')?.dirty && !f?.form?.get('email')?.valid">
+      Field is not valid
+    </span>
+    <hr />
+    <input name="message" [(ngModel)]="message" required maxlength="512" />
+    <span
+      *ngIf="f.form.get('message')?.dirty && !f?.form?.get('message')?.valid"
+    >
+      Field is not valid
+    </span>
+    <hr />
+    <input name="phone" [(ngModel)]="phone" required />
+    <span *ngIf="f.form.get('phone')?.dirty && !f?.form?.get('phone')?.valid">
+      Field is not valid
+    </span>
+    <hr />
+    <button type="button" [disabled]="!f.valid" (click)="handleSubmit()">
+      Submit
+    </button>
+  </div>
+</form>
