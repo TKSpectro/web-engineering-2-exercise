@@ -1,0 +1,63 @@
+<form [formGroup]="form">
+  <label>
+    Firstname:
+    <input formControlName="firstname" />
+  </label>
+  <span
+    *ngIf="
+      !form?.get('firstname')?.pristine &&
+      form?.get('firstname')?.hasError('required')
+    "
+  >
+    The firstname is required
+  </span>
+  <br />
+
+  <label>
+    Lastname:
+    <input formControlName="lastname" />
+  </label>
+  <span
+    *ngIf="
+      !form?.get('lastname')?.pristine &&
+      form?.get('lastname')?.hasError('required')
+    "
+  >
+    The lastname is required
+  </span>
+  <br />
+
+  <label>
+    Age:
+    <input name="age" formControlName="age" type="number" />
+  </label>
+
+  <span
+    *ngIf="
+      !form?.get('age')?.pristine &&
+      form?.get('age')?.hasError('between') &&
+      form?.get('age')?.getError('between').max !== undefined
+    "
+  >
+    The age should not be greater than
+    {{ form.get("age")?.getError("between").max }}
+  </span>
+  <span
+    *ngIf="
+      !form?.get('age')?.pristine &&
+      form?.get('age')?.hasError('between') &&
+      form?.get('age')?.getError('between').min !== undefined
+    "
+  >
+    The age should not be lesser than
+    {{ form.get("age")?.getError("between").min }}
+  </span>
+  <br />
+
+  <input
+    type="button"
+    [disabled]="!form.valid"
+    value="Submit"
+    (click)="alert(form.value)"
+  />
+</form>
