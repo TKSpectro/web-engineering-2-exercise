@@ -1,0 +1,13 @@
+<p>shopping-list component!</p>
+
+Name: <input type="text" [(ngModel)]="name" /><br />
+Amount: <input type="number" [(ngModel)]="amount" /><br />
+
+<input type="button" value="Add" (click)="add()" />
+
+<ul>
+  <li *ngFor="let shoppingItem of shoppingList$ | async">
+    {{ shoppingItem.name }} : {{ shoppingItem.amount }} -
+    <input type="button" value="Remove" (click)="remove(shoppingItem)" />
+  </li>
+</ul>

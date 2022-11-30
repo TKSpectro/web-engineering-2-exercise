@@ -1,0 +1,7 @@
+<p>second component!</p>
+
+<ul>
+  <li *ngFor="let shoppingItem of shoppingList$ | async">
+    {{ shoppingItem.name }} : {{ shoppingItem.amount }}
+  </li>
+</ul>
