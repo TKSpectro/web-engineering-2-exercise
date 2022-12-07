@@ -1,0 +1,22 @@
+<p>animate works!</p>
+
+<button (click)="addClass()">addClass</button>
+<button (click)="removeClass()">removeClass</button>
+
+<div
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  class="open-close-container"
+  (mouseover)="toggle()"
+  (mouseout)="toggle()"
+>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, pariatur. Omnis
+  ullam fuga nostrum, quo officiis quae laboriosam excepturi voluptates, cum
+  veniam ex saepe nam explicabo? Quis similique facilis harum! Lorem ipsum dolor
+  sit, amet consectetur adipisicing elit. Exercitationem dolorum enim corporis
+  ea voluptas cumque nobis cupiditate molestias, perspiciatis culpa recusandae
+  maiores voluptatem. Accusamus iusto, nam molestiae corrupti laboriosam
+  exercitationem? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Officia aperiam blanditiis exercitationem ipsam voluptatibus molestias
+  reprehenderit magnam voluptatem eveniet saepe hic laborum delectus enim,
+  tenetur non inventore repellendus fuga. Iure.
+</div>
